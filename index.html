@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ABC Tech | Sua loja de tecnologia</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a class="logo" href="index.html">ABC<span>Tech</span></a>
+
+    <nav aria-label="Navegação principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#carrinho">
+        Carrinho (<span id="contador-carrinho">0</span>)
+      </a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="apresentacao" aria-labelledby="titulo-principal">
+      <span class="etiqueta">TECNOLOGIA PARA O SEU DIA A DIA</span>
+
+      <h1 id="titulo-principal">
+        Seu próximo upgrade começa aqui.
+      </h1>
+
+      <p>
+        Encontre acessórios para estudar, trabalhar e jogar.
+        Escolha seus favoritos e monte seu carrinho.
+      </p>
+
+      <a class="botao botao-primario" href="#produtos">
+        Explorar produtos
+      </a>
+    </section>
+
+    <div class="layout-loja">
+      <section id="produtos" aria-labelledby="titulo-produtos">
+        <div class="titulo-secao">
+          <h2 id="titulo-produtos">Nossos produtos</h2>
+          <p>Escolha o que combina com você.</p>
+        </div>
+
+        <!-- O JavaScript vai inserir os produtos aqui. -->
+        <div id="lista-produtos" class="grade-produtos"></div>
+      </section>
+
+      <aside
+        id="carrinho"
+        class="carrinho"
+        aria-labelledby="titulo-carrinho"
+      >
+        <h2 id="titulo-carrinho">Meu carrinho</h2>
+
+        <!-- O JavaScript vai atualizar os itens desta lista. -->
+        <ul id="itens-carrinho" class="itens-carrinho"></ul>
+
+        <p id="mensagem-vazio" class="mensagem-vazio">
+          Seu carrinho está vazio. Adicione um produto para começar!
+        </p>
+
+        <div class="resumo-compra">
+          <div class="linha-total">
+            <span>Total dos produtos</span>
+            <strong id="total-carrinho">R$ 0,00</strong>
+          </div>
+
+          <p class="aviso-compra">
+            Compra demonstrativa, sem cobrança ou entrega.
+          </p>
+
+          <button
+            id="finalizar-compra"
+            class="botao botao-primario"
+            type="button"
+            disabled
+          >
+            Simular finalização
+          </button>
+
+          <button
+            id="limpar-carrinho"
+            class="botao botao-secundario"
+            type="button"
+            disabled
+          >
+            Esvaziar carrinho
+          </button>
+        </div>
+      </aside>
+    </div>
+
+    <p
+      id="mensagem-status"
+      class="mensagem-status"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></p>
+
+    <noscript>
+      <p>Ative o JavaScript para visualizar os produtos e usar o carrinho.</p>
+    </noscript>
+  </main>
+
+  <footer class="rodape">
+    <p>ABC Tech — Projeto acadêmico de desenvolvimento web.</p>
+    <p>Loja demonstrativa. Nenhuma compra real será realizada.</p>
+  </footer>
+</body>
+</html>
